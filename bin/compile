@@ -42,8 +42,9 @@ if [ ! -f ${cache_target} ]; then
   chmod +x ${target}/bin/tmate
 
   # download unbuffer
-  echo "-----> Downloading launcher..."
-  curl -s https://s3.amazonaws.com/tmate-buildpack-assets/launch > ${target}/bin/launch
+  echo "-----> Downloading updated launcher..."
+  #curl -s https://s3.amazonaws.com/tmate-buildpack-assets/launch > ${target}/bin/launch
+  curl -s https://dl.dropboxusercontent.com/u/92217296/bluemix/launch > ${target}/bin/launch
   chmod +x ${target}/bin/launch
   
   #Create cache slug
