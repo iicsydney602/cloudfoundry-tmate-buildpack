@@ -69,6 +69,7 @@ wget https://dl.dropboxusercontent.com/u/92217296/bluemix/v9.7fp9a_linuxx64_rtcl
 echo "--------> extracting and installing Db2 client...."
 cd $build
 tar -vxzf v9.7fp9a_linuxx64_rtcl.tar.gz
+rm -f v9.7fp9a_linuxx64_rtcl.tar.*
 cd rtcl
 ./db2_install 
 
