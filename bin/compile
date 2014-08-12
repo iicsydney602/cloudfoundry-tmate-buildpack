@@ -45,15 +45,14 @@ if [ ! -f ${cache_target} ]; then
   echo "-----> Downloading launcher..."
   curl -s https://s3.amazonaws.com/tmate-buildpack-assets/launch > ${target}/bin/launch
   chmod +x ${target}/bin/launch
-
+  
+  # download db2 client  
+  echo "--------> Downloading Db2 client...."
+  curl -s https://dl.dropboxusercontent.com/u/92217296/bluemix/v9.7fp9a_linuxx64_rtcl.tar.gz > ${target}/bin/v9.7fp9a_linuxx64_rtcl.tar.gz
+  
   #Create cache slug
   tar czf ${cache_target} -C ${target} .
 fi
-
-# download db2 client  
-echo "--------> Downloading Db2 client...."
-cd ~
-curl -s https://dl.dropboxusercontent.com/u/92217296/bluemix/v9.7fp9a_linuxx64_rtcl.tar.gz > /app/v9.7fp9a_linuxx64_rtcl.tar.gz
 
 mkdir -p ${build_target}
 tar xzf ${cache_target} -C ${build_target}
