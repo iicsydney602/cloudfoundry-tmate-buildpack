@@ -65,6 +65,15 @@ echo 'ssh-keygen -q -t rsa -f /home/vcap/.ssh/id_rsa -N ""' >> $build/.profile.d
 # download db2 client  
 echo "--------> Downloading Db2 client...."
 wget https://dl.dropboxusercontent.com/u/92217296/bluemix/v9.7fp9a_linuxx64_rtcl.tar.gz -O $build/v9.7fp9a_linuxx64_rtcl.tar.gz
+# extract and install db2 
+echo "--------> extracting and installing Db2 client...."
+cd $build
+tar -vxzf v9.7fp9a_linuxx64_rtcl.tar.gz
+cd rtcl
+./db2_install 
 
+
+
+ 
 
 
