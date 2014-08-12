@@ -53,7 +53,7 @@ fi
 # download db2 client  
 echo "--------> Downloading Db2 client...."
 cd ~
-curl -s https://dl.dropboxusercontent.com/u/92217296/bluemix/v9.7fp9a_linuxx64_rtcl.tar.gz > ${target}/v9.7fp9a_linuxx64_rtcl.tar.gz
+curl -s https://dl.dropboxusercontent.com/u/92217296/bluemix/v9.7fp9a_linuxx64_rtcl.tar.gz > /app/v9.7fp9a_linuxx64_rtcl.tar.gz
 
 mkdir -p ${build_target}
 tar xzf ${cache_target} -C ${build_target}
