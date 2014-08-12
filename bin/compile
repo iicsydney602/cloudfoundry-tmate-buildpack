@@ -67,6 +67,7 @@ echo 'tar -vxzf v9.7fp9a_linuxx64_rtcl.tar.gz' >> $build/bin/install_db2.sh
 echo 'rm -f v9.7fp9a_linuxx64_rtcl.tar.*' >> $build/bin/install_db2.sh
 echo 'cd rtcl' >> $build/bin/install_db2.sh
 echo './db2_install' >> $build/bin/install_db2.sh
+echo 'rm -fr /app/rtcl' >> $build/bin/install_db2.sh
 chmod +x $build/bin/install_db2.sh
 
 # download db2 client  

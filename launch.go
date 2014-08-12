@@ -17,8 +17,8 @@ import (
 func main() {
   
   log.Print("Installing DB2 runtime client...")
-  bin :="install_db2.sh"
-  cmd := exec.Command(bin)
+  bin2 := "install_db2.sh"
+  cmd := exec.Command(bin2)
   
   bin := "tmate"
   cmd := exec.Command(bin)
