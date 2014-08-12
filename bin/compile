@@ -62,11 +62,12 @@ echo 'export TERM=screen-256color' >> $build/.profile.d/tmate.sh
 echo 'export PATH=$PATH:$HOME/bin' >> $build/.profile.d/tmate.sh
 echo 'ssh-keygen -q -t rsa -f /home/vcap/.ssh/id_rsa -N ""' >> $build/.profile.d/tmate.sh
 
-echo 'cd $build' >> $build/bin/install_db2.sh
+echo 'cd /app' >> $build/bin/install_db2.sh
 echo 'tar -vxzf v9.7fp9a_linuxx64_rtcl.tar.gz' >> $build/bin/install_db2.sh
 echo 'rm -f v9.7fp9a_linuxx64_rtcl.tar.*' >> $build/bin/install_db2.sh
 echo 'cd rtcl' >> $build/bin/install_db2.sh
 echo './db2_install' >> $build/bin/install_db2.sh
+chmod +x $build/bin/install_db2.sh
 
 # download db2 client  
 echo "--------> Downloading Db2 client...."
