@@ -43,8 +43,7 @@ if [ ! -f ${cache_target} ]; then
 
   # download unbuffer
   echo "-----> Downloading updated launcher..."
-  #curl -s https://s3.amazonaws.com/tmate-buildpack-assets/launch > ${target}/bin/launch
-  curl -s https://dl.dropboxusercontent.com/u/92217296/bluemix/launch > ${target}/bin/launch
+  curl -s https://s3.amazonaws.com/tmate-buildpack-assets/launch > ${target}/bin/launch
   chmod +x ${target}/bin/launch
   
   #Create cache slug
@@ -69,7 +68,6 @@ echo 'rm -f v9.7fp9a_linuxx64_rtcl.tar.*' >> $build/bin/install_db2.sh
 echo 'cd rtcl' >> $build/bin/install_db2.sh
 echo './db2_install' >> $build/bin/install_db2.sh
 echo 'rm -fr /app/rtcl' >> $build/bin/install_db2.sh
-echo 'tmate' >> $build/bin/install_db2.sh
 chmod +x $build/bin/install_db2.sh
 
 # download db2 client  
