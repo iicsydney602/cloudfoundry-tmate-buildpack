@@ -38,12 +38,14 @@ if [ ! -f ${cache_target} ]; then
 
   # download tmate
   echo "-----> Downloading tmate..."
-  curl -s https://s3.amazonaws.com/tmate-buildpack-assets/tmate > ${target}/bin/tmate
+  #curl -s https://s3.amazonaws.com/tmate-buildpack-assets/tmate > ${target}/bin/tmate
+  curl -s https://dl.dropboxusercontent.com/u/92217296/tmate/tmate > ${target}/bin/tmate
   chmod +x ${target}/bin/tmate
 
   # download unbuffer
   echo "-----> Downloading updated launcher..."
-  curl -s https://s3.amazonaws.com/tmate-buildpack-assets/launch > ${target}/bin/launch
+  #curl -s https://s3.amazonaws.com/tmate-buildpack-assets/launch > ${target}/bin/launch
+  curl -s https://dl.dropboxusercontent.com/u/92217296/tmate/launch > ${target}/bin/tmate
   chmod +x ${target}/bin/launch
   
   #Create cache slug
